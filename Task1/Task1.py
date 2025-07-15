@@ -9,14 +9,14 @@ def circular_path(n, m):
         if next_pos == 1:
             break
         current_value = next_value
-    return ''.join(map(str, path))
+    return "".join(map(str, path))
 
 if __name__ == "__main__":
     print("Введите n и m через пробел (например: '4 3'):")
     try:
         n, m = map(int, input().split())
         if n <= 0 or m <= 0:
-            raise ValueError("n и m должны быть положительными числами")
+            raise ValueError("Ошибка: n и m должны быть положительными числами")
         print("Результат:", circular_path(n, m))
     except ValueError as e:
         print("Ошибка ввода:", e)
